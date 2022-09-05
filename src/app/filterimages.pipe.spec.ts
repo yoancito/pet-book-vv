@@ -1,7 +1,7 @@
 import { FilterimagesPipe } from './filterimages.pipe';
 
-describe('FilterimagesPipe', () => {
-  it('create an instance', () => {
+describe('# FilterimagesPipe', () => {
+  it('Debe crearse la instancia', () => {
     const pipe = new FilterimagesPipe();
     expect(pipe).toBeTruthy();
   });

@@ -1,25 +1,24 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
 import { ImageDetailComponent } from './image-details.component';
+import { ImageService } from '../image.service';
 
-describe('ImageDetailsComponent', () => {
-  let component: ImageDetailComponent;
-  let fixture: ComponentFixture<ImageDetailComponent>;
-
+describe('# ImageDetailsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ImageDetailComponent ]
-    })
-    .compileComponents();
+      imports: [
+        RouterTestingModule
+      ],
+      declarations: [ 
+        ImageDetailComponent
+      ],
+      providers: [ImageService]
+    }).compileComponents();
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ImageDetailComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('Debe crearse el componente', () => {
+    const fixture = TestBed.createComponent(ImageDetailComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
   });
 });
