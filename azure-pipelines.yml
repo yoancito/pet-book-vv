@@ -1,5 +1,5 @@
 trigger:
-- test #rama dónde se trabajaron los test
+- azure-pipelines #rama dónde se trabajaron los test
 
 pool:
   vmImage: ubuntu-latest
